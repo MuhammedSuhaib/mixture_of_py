@@ -1,7 +1,19 @@
-# globl stuffs
-<!-- 
----
-dis : a py built in module is disassembleIn Python, everything is treated as an objectFeature
+Quick diff:
+
+- **`dis`** → Disassembles Python bytecode. Used for debugging/inspection.  
+`dis` : a py built in module is disassembleIn Python, everything is treated as an objectFeature
+  ```python
+  import dis
+  dis.dis("a = 1 + 2")
+  ```
+
+- **`decode`** → Converts **bytes → string** using a character encoding (like UTF-8).  
+  ```python
+  b = b'hello'
+  print(b.decode('utf-8'))  # 'hello'
+  ```
+
+✅ `dis` = inspect code; `decode` = convert bytes to string.
 `dir()` → returns **list of names** (attributes, methods) for:
 - Object (if given)
 - Current scope (if no argument)  
@@ -15,14 +27,17 @@ id(): every thing is storing in a unique location with some address  so to see t
 len() instead of .lenght()
 pass to pass the logic means we will write logic it later
 d -->
-## Match cses
-<!-- match variable:
+## Match cases
+```python 
+match variable:
     case pattern1:
         # Code block for pattern1
     case pattern2:
         # Code block for pattern2
     case _:
         # Default case (similar to "else")
+```
+ match: A statement that checks the value of a variable against multiple patterns.
 variable: The value being matched.
 pattern1, pattern2: Patterns to match against.
 _: A wildcard pattern that matches anything (acts as a default case).
@@ -38,29 +53,21 @@ for num in numbers:
         break
 else:
     print("Loop completed successfully!")  # This will NOT run
- -->
-
-# third parameter Of range()
- <!-- ### The **third parameter** in `range(start, stop, step)` is the **step size**.
-
-- **Step** controls how much to increment or decrement the value at each iteration.
-For example, `range(2, 11, 2)` means:
-- Start at `2`.
-- Go up to (but don't include) `11`.
-- **Step by 2** (skip 1, take every 2nd number).
-
-In this case, `range(2, 11, 2)` gives: `2, 4, 6, 8, 10`.
-
-If you change the step:
-- `range(1, 10, 3)` → will give `1, 4, 7` (steps of 3).
-- `range(10, 1, -1)` → will give `10, 9, 8, 7, 6, 5, 4, 3, 2` (steps of -1, counting down).
-
-So, the third parameter controls how "big" each step is in the sequence.
- -->
-
- <!-- _ (underscore) This is a throwaway variable, which is a common Python convention for a variable that you don't plan to use
+# _ 
+ _ (underscore) This is a throwaway variable, which is a common Python convention for a variable that you don't plan to use
 for _ in range(10): # Just to show that _ is a loop variable, but its throwaway variable
     print(f"Hello, World! Iteration { _ }")
 
+# loops
 break: Exits the loop immediately.
-continue: Skips the rest of the code in the current iteration and moves to the next iteration. -->
+continue: Skips the rest of the code in the current iteration and moves to the next iteration. 
+
+# Validate email:
+import re
+email = "test@example.com"
+print(bool(re.match(r".+@.+\..+", email)))  # True
+# Strong password check:	
+import re
+password = "Abc123!"
+print(bool(re.match(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{6,}$', password)))  
+# True if 6+ chars, letters & numbers 

@@ -618,6 +618,22 @@ const data: readonly [number, number, number] = [4, 5, 6];
 
 ## ***RANGE***
 
+### The **third parameter** in `range(start, stop, step)` is the **step size**.
+
+- **Step** controls how much to increment or decrement the value at each iteration.
+For example, `range(2, 11, 2)` means:
+- Start at `2`.
+- Go up to (but don't include) `11`.
+- **Step by 2** (skip 1, take every 2nd number).
+
+In this case, `range(2, 11, 2)` gives: `2, 4, 6, 8, 10`.
+
+If you change the step:
+- `range(1, 10, 3)` → will give `1, 4, 7` (steps of 3).
+- `range(10, 1, -1)` → will give `10, 9, 8, 7, 6, 5, 4, 3, 2` (steps of -1, counting down).
+
+So, the third parameter controls how "big" each step is in the sequence.
+
 ## ***Dictionaries vs Objects***
 Python uses **dict**, while TypeScript/JavaScript uses **objects or Map**.
 

@@ -1,47 +1,5 @@
-# Validate email:
-import re
-email = "test@example.com"
-print(bool(re.match(r".+@.+\..+", email)))  # True
-# Strong password check:	
-import re
-password = "Abc123!"
-print(bool(re.match(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{6,}$', password)))  
-# True if 6+ chars, letters & numbers
-
-
-In Python, "guards" usually mean:
-
-
-
-
-
-
-
-
-
-Ordered: Lists are ordered, meaning that the items in the list have a specific order and can be accessed by their index.
-Mutable: Lists are mutable, meaning that they can be modified after they are created.
-Indexed: Lists are indexed, meaning that each item in the list has a specific index that can be used to access it.
-Dynamic size: Lists can grow or shrink dynamically as elements are added or removed.
-Heterogeneous: Lists can contain elements of different data types, such as integers, strings, floats, and other lists.
-Supports duplicate values: Lists can contain duplicate values.
-
-fruits: list = ["apple", "banana", "cherry"]
-print(fruits[0])   # Output: apple
-print(fruits[-3])  # Output: apple, accessing element in reverse order
-
-
-append vs extend 
-apnd 4 single value | x6tnd  4 multiple elemnts
-
-Feature | pop() | remove()
-Based on | Index | Value
-Return value | Yes (removed item) | No (returns None)
-Error if... | Index out of range | Value not found
-Default use | Removes the given index item if not given so last item | Removes first matching value
-
-
-pop give error if not found but ve can handle it grace fully on the 2nd index where we ca n define what to say if not found either -1 or any other msg like "No such item found"
+# List 
+pop give error if not  found but ve can handle it grace fully on the 2nd index where we ca n define what to say if not found either -1 or any other msg like "No such item found"
 pop()	Removes the element with the specified key
 popitem()	Removes the last inserted key-value pair
 warnig:
@@ -309,11 +267,9 @@ adding/removing elements may trigger rehashing, leading to reallocation of stora
 
 ###### Sets are unordered, but as of Python 3.7+, they maintain insertion order while internally relying on hashing."
 
-# O(1) or constant time complexity
-an algorithm takes the same amount of time to execute, regardless of the size of the input
-Number of operations needed to run an algorithm on 
 
-## Frozenset
+
+# Frozenset
 still unique& unordered but hashable & immutable
 **Thread safety:**
 set: No Thread safety: Can lead to in consistency
@@ -780,7 +736,7 @@ print(get_data(), type(get_data()))#(200, ['ok'], {'count': 1}) <class 'tuple'>
 
 ```
 # Order of args in function
-![alt text](image.png)
+![alt text](./public/image.png)
 
 
 ### 🔹 Python Name Resolution (LEGB Rule)
@@ -823,4 +779,8 @@ def factorial(n):#take n from user
 # Example usage
 print(factorial(5))  # Output: 120
 ```
-![alt text](image-1.png)
+![alt text](./public/image-1.png)
+
+# O(1) or constant time complexity
+an algorithm takes the same amount of time to execute, regardless of the size of the input
+Number of operations needed to run an algorithm on 
