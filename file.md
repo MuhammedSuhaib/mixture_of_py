@@ -1,60 +1,3 @@
-<!-- default font size ==14 -->
-### **1. Python String Prefixes & Formatting**
----
-#### **String Prefixes:**
-1. **`r""`** → **Raw String Literal**  
-   - Escape sequences are not processed (`\n`, `\t`, etc.)
-  
-2. **`b""`** → **Byte String**  
-   - Stores bytes, not characters.
-
-3. **`f""`** → **Formatted String**  
-   - Embed expressions with `{}`.
-ing Formatting (for `format()` and f-strings):**
----
-
-### **Escape Sequences:**
-
-- `\'` → Single Quote  
-- `\\` → Backslash  
-- `\n` → New Line  
-- `\r` → Carriage Return  
-- `\t` → Tab  
-- `\b` → Backspace  
-- `\f` → Form Feed (page break)  
-- `\ooo` → Octal value  
-- `\xhh` → Hex value
-
-**Examples:**
-
-```python
-txt = "Hello\rWorld!"  # Erases one character (backspace)
-print(txt)
-
-txt = "Hello \bWorld!"  # A backspace character
-print(txt)
-
-txt = "\110\145\154\154\157"  # Octal value for "Hello"
-print(txt)
-
-txt = "\x48\x65\x6c\x6c\x6f"  # Hex values for "Hello"
-print(txt)
-
-txt = "Line1\fLine2"  # Form feed (page break), moves to the next page (used in printers)
-print(txt)
-```
-
----
-
-#### **Unicode characters:**
-
-Unicode characters are denoted by `\u` followed by a four-digit hexadecimal code.
-
-```python
-print(r"\u0041")  # A
-print(r"\u0042")  # B
-print(r"\u0043")  # C
-```
 # globl stuffs
 <!-- 
 ---
@@ -121,5 +64,3 @@ for _ in range(10): # Just to show that _ is a loop variable, but its throwaway 
 
 break: Exits the loop immediately.
 continue: Skips the rest of the code in the current iteration and moves to the next iteration. -->
-
-

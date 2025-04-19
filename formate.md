@@ -1,20 +1,5 @@
-## Use the Slice Operator
 
-You can make a copy of a list by using the `:` (slice) operator.
-
-In Python, "guards" usually mean:
-
-The second parameter in the `range()` function never reaches the specified value. To include that value, you can add it dynamically, like `1 + num`. This ensures the range includes the desired value, even if it's a variable.
-
-For example:
-
-```python
-num = 10
-for i in range(1, 1 + num, 3):
-    print(i)  # Output: 1, 4, 7, 10
-```
-
-`\r` is a carriage return. It removes previous words and moves the cursor to the beginning of the line.
+In Python, "guards" usually mean:  early checks to avoid wrong execution.
 
 ---
 

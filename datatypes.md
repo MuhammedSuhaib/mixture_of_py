@@ -2,15 +2,13 @@
 
 ![Data Types](./public/datatype.png)
 
-| Python 🐍                    | TypeScript/JavaScript 🟦|
-| ---------------------------- | -----------------------------|
 ## ***STRING***
 
 
 | `name: str = "Ali"`          | `let name: string = "Ali";`|
 
 
-#### String Interpolation
+- #### String Interpolation
 
 ```python
 first_name = "Fahad"
@@ -30,17 +28,75 @@ let fullName = `${firstName} ${lastName}`; // Template literals
 
 ---
 
-- #### String Formatting
+- ####  String Prefixes & Formatting
 
-```python
-greeting = "Hello, {}!".format(first_name)
-```
+1. **`r""`** → **Raw String Literal**  
+   Escape sequences are not processed (`\n`, `\t`, etc.).
 
- ***Comparison with JavaScript/TypeScript:***
+   **Escape Sequences:**  
+   Escape sequences are special characters preceded by a backslash (`\`). They allow you to include characters in strings that are hard to type directly:
 
-- Not available in JavaScript/TypeScript
+   - `\"` → Double Quote  
+   - `\'` → Single Quote  
+   - `\\` → Backslash  
+   - `\n` → New Line  
+   - `\r` → Carriage Return  
+   - `\t` → Tab  
+   - `\b` → Backspace  
+   - `\f` → Form Feed (page break)  
+   - `\ooo` → Octal value  
+   - `\xhh` → Hex value  
+   - `\uXXXX` → Unicode (4-digit hex)  
+   - `\UXXXXXXXX` → Unicode (8-digit hex)
 
----
+    ```python
+   txt = "Hello\rWorld!"  # Carriage return
+   print(txt)
+    ```
+    \r = Carriage return. It removes previous characters after the \r and moves the cursor back to the beginning of the line, allowing overwriting.
+    Example: Like double-select and overwrite.
+
+    ```python
+   txt = "Hello \bWorld!"  # Backspace
+   print(txt)
+
+   txt = "\110\145\154\154\157"  # Octal for "Hello"
+   print(txt)
+
+   txt = "\x48\x65\x6c\x6c\x6f"  # Hex for "Hello"
+   print(txt)
+
+   txt = "Line1\fLine2"  # Form feed
+   print(txt)
+   ```
+
+
+2. **`b""` → Byte String**  
+   Stores bytes instead of Unicode characters.
+
+3. **`f""` → Formatted String (f-string)**  
+   Embed expressions using `{}`.
+
+   **Example:**
+
+   ```python
+   first_name = "Alice"
+   greeting = f"Hello, {first_name}!"
+   print(greeting)
+   ```
+
+   Or using `format()`:
+
+   ```python
+   greeting = "Hello, {}!".format("Alice")
+   print(greeting)
+   ```
+
+4. **`u""` → Unicode String**
+    Used in Python 2; in Python 3, it’s optional as all strings are Unicode by default.
+  
+---  
+
 
 - #### Old-Style Formatting
 
@@ -241,7 +297,7 @@ print("quick brown fox".count("o")) #2
 
 - **Not available in JavaScript/TypeScript (requires regex or loop)**
 
-#### String Slicing
+#### Slicing
 
 ```python
 name = "Hamza Ahmed Alvi"
@@ -255,14 +311,30 @@ let name = "Hamza Ahmed Alvi";
 console.log(name.substring(0, 5)); // Hamza
 console.log(name.substring(2)); // mza Ahmed Alvi
 ```
-
-
 ---
 
 - **Python:** slicing syntax → `obj[start:end:step]`  
 - **JS/TS:** use `slice(start, end)` or `substring(start, end)` (no `step`)  
+
 - In `py/ts/js`, slice[] and range() never include the second argument.
+- Because the second parameter never reaches that value, to ensure it "can", instead of writing a fixed number, we can do something like 1 + 10. Now it can reach 10, even if it's a variable.
+- The third parameter adds that number in each iteration, like:
+  ```py
+  nums = [0, 1, 2, ..., 10]
+  print(nums[1:num + 1:3])  # includes index 10
+
+  num = 10
+  for i in range(1, 1 + num, 3):
+    print(i)  # Output: 1, 4, 7, 10
+  
+  ```
 - Use negative indexes to slice from the end of the string.
+- You can make a copy of a list by using the `:` (slice) operator.
+  ```py
+  this_list = ["apple", "banana", "cherry"]
+  my_list = this_list[:]
+  print(my_list)  # Output: ['apple', 'banana', 'cherry']
+  ```
 - The 3rd parameter as -1 will reverse the slice.
 - **Step** (Python only):  
   - `2` → skip every 2nd item / n no.of items   

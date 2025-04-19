@@ -1,19 +1,8 @@
-Use the slice Operator
-You can also make a copy of a list by using the : (slice) operator.
-
-thislist = ["apple", "banana", "cherry"]
-mylist = thislist[:]
-print(mylist)
-
-
-		 Validate email:
-
-
+# Validate email:
 import re
 email = "test@example.com"
 print(bool(re.match(r".+@.+\..+", email)))  # True
-
-		Strong password check:	
+# Strong password check:	
 import re
 password = "Abc123!"
 print(bool(re.match(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{6,}$', password)))  
@@ -23,16 +12,8 @@ print(bool(re.match(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{6,}$', password)
 In Python, "guards" usually mean:
 
 
-bcz 2nd parma never reach that value so in order to reach that instead of write a number ahead we can do it like 1+10 now it can reach reach 10 even it is a variable
-
-the the pram will add that number in each itration like 
-num, = 10
-
- for i in range (1, 1+num,3):
- print( i )#1,4,710
 
 
-\r = carage treturn it remove prevous words == doublesecet & move on
 
 
 
