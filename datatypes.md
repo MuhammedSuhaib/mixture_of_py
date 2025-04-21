@@ -6,6 +6,7 @@
 | ---------------------------- | -----------------------------|
 ## ***STRING***
 
+
 | `name: str = "Ali"`          | `let name: string = "Ali";`|
 
 
@@ -112,7 +113,7 @@ let greeting = arr.join(""); // Join array elements
 
 ---
 
-## String Methods
+### String Methods
 
 #### Convert to Uppercase
 
@@ -385,62 +386,87 @@ text = "abc"
 print(text.translate(trans))  # Output: "123"
 ```
 
-#### **`encode()`**: Encodes the string.
+#### **`encode()`**: 
+Encodes the string.
 
-#### **`endswith(suffix)`**: Checks if string ends with the given suffix.
+#### **`endswith(suffix)`**: 
+Checks if string ends with the given suffix.
 
-#### **`expandtabs(tabsize)`**: Sets tab size.
+#### **`expandtabs(tabsize)`**: 
+Sets tab size.
 
-#### **`format_map()`**: Formats specified values in the string.
+#### **`format_map()`**: 
+Formats specified values in the string.
 
-#### **`index(substring)`**: Returns the position of the substring.
+#### **`index(substring)`**: 
+Returns the position of the substring.
 
-#### **`partition(separator)`**: Partitions the string into a tuple of three parts.
+#### **`partition(separator)`**: 
+Partitions the string into a tuple of three parts.
 
-#### **`rfind(substring)`**: Finds the last occurrence of the substring.
+#### **`rfind(substring)`**: 
+Finds the last occurrence of the substring.
 
-#### **`rindex(substring)`**: Finds the last occurrence of the substring and returns its index.
+#### **`rindex(substring)`**: 
+Finds the last occurrence of the substring and returns its index.
 
-#### **`rjust(width, char)`**: Right-aligns the string within the specified width, pads with `char`.
+#### **`rjust(width, char)`**: 
+Right-aligns the string within the specified width, pads with `char`.
 
-#### **`rpartition(separator)`**: Partitions the string into three parts from the right.
+#### **`rpartition(separator)`**:
+Partitions the string into three parts from the right.
 
-#### **`rsplit()`**: Splits the string at the specified separator, from the right.
+#### **`rsplit()`**:
+Splits the string at the specified separator, from the right.
 
-#### **`rstrip()`**: Removes trailing whitespaces.
+#### **`rstrip()`**:
+Removes trailing whitespaces.
 
-#### **`split()`**: Splits the string at the specified separator.
+#### **`split()`**:
+Splits the string at the specified separator.
 
-#### **`startswith(prefix)`**: Checks if the string starts with the specified prefix.
+#### **`startswith(prefix)`**:
+Checks if the string starts with the specified prefix.
 
-#### **`zfill(width)`**: Pads the string with zeros on the left to the specified width.
+#### **`zfill(width)`**:
+Pads the string with zeros on the left to the specified width.
 
-#### **`isascii()`**: Checks if all characters are ASCII.
+#### **`isascii()`**:
+Checks if all characters are ASCII.
 
-#### **`isdecimal()`**: Checks if all characters are decimals.
+#### **`isdecimal()`**:
+Checks if all characters are decimals.
 
-#### **`isidentifier()`**: Checks if the string is a valid identifier.
+#### **`isidentifier()`**:
+Checks if the string is a valid identifier.
 
-#### **`islower()`**: Checks if all characters are lowercase.
+#### **`islower()`**:
+Checks if all characters are lowercase.
 
-#### **`isnumeric()`**: Checks if all characters are numeric.
+#### **`isnumeric()`**:
+Checks if all characters are numeric.
 
-#### **`isprintable()`**: Checks if all characters are printable.
+#### **`isprintable()`**:
+Checks if all characters are printable.
 
-#### **`isspace()`**: Checks if all characters are whitespaces.
+#### **`isspace()`**:
+Checks if all characters are whitespaces.
 
-#### **`istitle()`**: Checks if the string follows title case.
+#### **`istitle()`**:
+Checks if the string follows title case.
 
-#### **`isupper()`**: Checks if all characters are uppercase.
+#### **`isupper()`**:
+ Checks if all characters are uppercase.
 
-#### **`len()`**
+#### **`len()`**:
 
 ```py
 a = "Hello, World!"
 print(len(a))
 ```
 
-#### **`in/not in`** Check if "free" is present in the following text:
+#### **`in/not in`** :
+Check if "free" is present in the following text:
 ```py
 txt = "The best things in life are free!"
 print("free" in txt)
