@@ -1,6 +1,5 @@
 ###### Ue Ctrl+Shift+V to open the markdown preview.
 
-
 ##  Introduction
 
 - Python and TypeScript/JavaScript are both widely used programming languages.

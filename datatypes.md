@@ -9,7 +9,7 @@
 | `name: str = "Ali"`          | `let name: string = "Ali";`|
 
 
-### String Interpolation
+#### String Interpolation
 
 ```python
 first_name = "Fahad"
@@ -29,7 +29,7 @@ let fullName = `${firstName} ${lastName}`; // Template literals
 
 ---
 
-- ### String Formatting
+- #### String Formatting
 
 ```python
 greeting = "Hello, {}!".format(first_name)
@@ -41,7 +41,7 @@ greeting = "Hello, {}!".format(first_name)
 
 ---
 
-- ### Old-Style Formatting
+- #### Old-Style Formatting
 
 ```python
 greeting = "Hello, %s!" % first_name
@@ -75,7 +75,7 @@ print(my_string)
 
 ---
 
-- ### String Concatenation
+- #### String Concatenation
 
 ```python
 greeting = "Hello, " + first_name + "!"
@@ -91,7 +91,7 @@ let greeting = "Hello, " + firstName + "!";
 
 ---
 
-- ### Joining Strings from Arrays
+- #### Joining Strings from Arrays
 
 ```python
 my = "John"
@@ -112,9 +112,9 @@ let greeting = arr.join(""); // Join array elements
 
 ---
 
-## 4. String Methods
+## String Methods
 
-### Convert to Uppercase
+#### Convert to Uppercase
 
 ```python
 print(full_name.upper())
@@ -124,7 +124,7 @@ print(full_name.upper())
 console.log(fullName.toUpperCase());
 ```
 
-### Convert to Lowercase
+#### Convert to Lowercase
 
 ```python
 print(full_name.lower())
@@ -134,7 +134,7 @@ print(full_name.lower())
 console.log(fullName.toLowerCase());
 ```
 
-### casefold()
+#### casefold()
 
 - Also converts string into lowercase. `.casefold()` is more aggressive than `.lower()` (e.g., it handles "ß" to "ss").
 
@@ -149,7 +149,7 @@ print(a.casefold()) # Output: "strasse"
 
 
 
-### Trim Whitespace
+#### Trim Whitespace
 
 ```python
 print(full_name.strip())
@@ -159,7 +159,7 @@ print(full_name.strip())
 console.log(fullName.trim());
 ```
 
-### Replace Substrings
+#### Replace Substrings
 
 ```python
 text = "quick brown fox"
@@ -172,7 +172,7 @@ console.log(text.replace("fox", "dog"));
 ```
 In ts/js it replaces only the first match..
 
-### Title Case (First Letter Capitalized)
+#### Title Case (First Letter Capitalized)
 
 ```python
 print("hello world".title())
@@ -183,7 +183,7 @@ print("hello world".title())
 console.log("hello world".replace(/\b\w/g, (c) => c.toUpperCase()));
 ```
 
-### capitalize()
+#### capitalize()
 
 - Converts only the first character to uppercase.
 
@@ -196,7 +196,7 @@ print(txt.capitalize())  # Output: "Hello, and welcome to my world."
 
 
 
-### Swap Case (Upper to Lower & Vice Versa)
+#### Swap Case (Upper to Lower & Vice Versa)
 
 ```python
 print("Hello PYTHON".swapcase())
@@ -204,7 +204,7 @@ print("Hello PYTHON".swapcase())
 
 - **Not available in JavaScript/TypeScript**
 
-### Check if String is Digit/Alpha/Alphanumeric
+#### Check if String is Digit/Alpha/Alphanumeric
 
 ```python
 print("12345".isdigit())  # True
@@ -218,7 +218,7 @@ console.log(/^[a-zA-Z]+$/.test("Hello")); // True
 console.log(/^[a-zA-Z0-9]+$/.test("Hello123")); // True
 ```
 
-### Find Substring Index
+#### Find Substring Index
 
 ```python
 print("quick brown fox".find("fox"))  # Returns index
@@ -232,7 +232,7 @@ console.log("quick brown fox".indexOf("dog"));
 // return -1 if not found
 ```
 
-### Count Occurrences
+#### Count Occurrences
 
 ```python
 print("quick brown fox".count("o")) #2
@@ -240,7 +240,7 @@ print("quick brown fox".count("o")) #2
 
 - **Not available in JavaScript/TypeScript (requires regex or loop)**
 
-### String Slicing
+#### String Slicing
 
 ```python
 name = "Hamza Ahmed Alvi"
@@ -255,7 +255,6 @@ console.log(name.substring(0, 5)); // Hamza
 console.log(name.substring(2)); // mza Ahmed Alvi
 ```
 
-Sure — here's a pro-style version:
 
 ---
 
@@ -271,7 +270,7 @@ Sure — here's a pro-style version:
 Use `[::-1]` for full reverse in Python.
 
 
-### center()
+#### center()
 
 - Centers the string. First parameter: total length, second parameter: padding character.
 
@@ -283,7 +282,7 @@ print(txt.center(20, '>')) # Output: ">>>>>>>banana>>>>>>>"
 
 ---
 
-### format()
+#### format()
 
 - Replaces `{}` with values. Supports string interpolation with format specifiers.
 
@@ -292,20 +291,20 @@ txt = "We have {:<8} chickens."
 print(txt.format(49)) # Output: "We have 49       chickens."
 ```
 
-##### Alignment Options:
+###### Alignment Options:
 
 - `:<` Left aligns.
 - `:>` Right aligns.
 - `:^` Centers.
 
-##### Sign Handling:
+###### Sign Handling:
 
 - `:=` Places the sign at the left.
 - `:+` Adds a plus sign for positive values.
 - `:-` Adds a minus sign only for negative values.
 - `:` Adds space before positive numbers.
 
-##### Number Formatting:
+###### Number Formatting:
 
 - `:,` Comma separator for thousands.
 - `:_` Underscore separator for thousands.
@@ -322,7 +321,7 @@ print(txt.format(49)) # Output: "We have 49       chickens."
 
 ---
 
-### ljust()
+#### ljust()
 
 - Left-aligns a string within a specified width, padding with spaces (or a specified character).
 
@@ -334,7 +333,7 @@ print(result)  # Output: "Hello-----"
 
 ---
 
-### lstrip()
+#### lstrip()
 
 - Returns a version of the string with leading spaces removed.
 
@@ -345,7 +344,7 @@ print(txt.lstrip())  # Output: "Hello"
 
 ---
 
-### maketrans()
+#### maketrans()
 
 - Creates a translation table for string replacement, used with `translate()`.
 
@@ -355,7 +354,7 @@ text = "abc abc"
 print(text.translate(trans))  # Output: "123 123"
 ```
 
-##### Advanced Usage:
+###### Advanced Usage:
 
 ```python
 trans = str.maketrans({"a": "1", "b": "2", "c": "3"})
@@ -365,7 +364,7 @@ print(text.translate(trans))  # Output: "123"
 
 ---
 
-### splitlines()
+#### splitlines()
 
 - Splits a string at line breaks and returns a list.
 - Note: `\n `breaks line when displaying, but not when processing. so we need splitlines()
@@ -376,7 +375,7 @@ print(txt.splitlines())  # Output: ['Thank you for the music', 'Welcome to the j
 
 ---
 
-### translate()
+#### translate()
 
 - Translates a string using a translation table or a dictionary.
 
@@ -386,69 +385,69 @@ text = "abc"
 print(text.translate(trans))  # Output: "123"
 ```
 
-### **`encode()`**: Encodes the string.
+#### **`encode()`**: Encodes the string.
 
-### **`endswith(suffix)`**: Checks if string ends with the given suffix.
+#### **`endswith(suffix)`**: Checks if string ends with the given suffix.
 
-### **`expandtabs(tabsize)`**: Sets tab size.
+#### **`expandtabs(tabsize)`**: Sets tab size.
 
-### **`format_map()`**: Formats specified values in the string.
+#### **`format_map()`**: Formats specified values in the string.
 
-### **`index(substring)`**: Returns the position of the substring.
+#### **`index(substring)`**: Returns the position of the substring.
 
-### **`partition(separator)`**: Partitions the string into a tuple of three parts.
+#### **`partition(separator)`**: Partitions the string into a tuple of three parts.
 
-### **`rfind(substring)`**: Finds the last occurrence of the substring.
+#### **`rfind(substring)`**: Finds the last occurrence of the substring.
 
-### **`rindex(substring)`**: Finds the last occurrence of the substring and returns its index.
+#### **`rindex(substring)`**: Finds the last occurrence of the substring and returns its index.
 
-### **`rjust(width, char)`**: Right-aligns the string within the specified width, pads with `char`.
+#### **`rjust(width, char)`**: Right-aligns the string within the specified width, pads with `char`.
 
-### **`rpartition(separator)`**: Partitions the string into three parts from the right.
+#### **`rpartition(separator)`**: Partitions the string into three parts from the right.
 
-### **`rsplit()`**: Splits the string at the specified separator, from the right.
+#### **`rsplit()`**: Splits the string at the specified separator, from the right.
 
-### **`rstrip()`**: Removes trailing whitespaces.
+#### **`rstrip()`**: Removes trailing whitespaces.
 
-### **`split()`**: Splits the string at the specified separator.
+#### **`split()`**: Splits the string at the specified separator.
 
-### **`startswith(prefix)`**: Checks if the string starts with the specified prefix.
+#### **`startswith(prefix)`**: Checks if the string starts with the specified prefix.
 
-### **`zfill(width)`**: Pads the string with zeros on the left to the specified width.
+#### **`zfill(width)`**: Pads the string with zeros on the left to the specified width.
 
-### **`isascii()`**: Checks if all characters are ASCII.
+#### **`isascii()`**: Checks if all characters are ASCII.
 
-### **`isdecimal()`**: Checks if all characters are decimals.
+#### **`isdecimal()`**: Checks if all characters are decimals.
 
-### **`isidentifier()`**: Checks if the string is a valid identifier.
+#### **`isidentifier()`**: Checks if the string is a valid identifier.
 
-### **`islower()`**: Checks if all characters are lowercase.
+#### **`islower()`**: Checks if all characters are lowercase.
 
-### **`isnumeric()`**: Checks if all characters are numeric.
+#### **`isnumeric()`**: Checks if all characters are numeric.
 
-### **`isprintable()`**: Checks if all characters are printable.
+#### **`isprintable()`**: Checks if all characters are printable.
 
-### **`isspace()`**: Checks if all characters are whitespaces.
+#### **`isspace()`**: Checks if all characters are whitespaces.
 
-### **`istitle()`**: Checks if the string follows title case.
+#### **`istitle()`**: Checks if the string follows title case.
 
-### **`isupper()`**: Checks if all characters are uppercase.
+#### **`isupper()`**: Checks if all characters are uppercase.
 
-### **`len()`**
+#### **`len()`**
 
 ```py
 a = "Hello, World!"
 print(len(a))
 ```
 
-### **`in/not in`** Check if "free" is present in the following text:
+#### **`in/not in`** Check if "free" is present in the following text:
 ```py
 txt = "The best things in life are free!"
 print("free" in txt)
 ```
 ---
 
-### Docstring (Multiline Comments)
+#### Docstring (Multiline Comments)
 
 ```python
 """
