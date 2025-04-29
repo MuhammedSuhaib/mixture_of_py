@@ -302,3 +302,78 @@ def my_generator():
     yield 2
     yield 3
 ```
+### Scenarios Where Exception Handling is Crucial
+File Operations: Handling missing files or permission errors during file access.
+
+User Input: Validating and handling invalid or unexpected input from users.
+
+Network Operations: Managing connection errors or timeouts in network requests.
+
+Mathematical Operations: Preventing division by zero or invalid calculations.
+
+---
+Quick walk-through:
+
+### `try`, `except`, `else`, `finally`
+- `try`: Code that might throw an error.
+- `except`: Runs if an error happens in `try`.
+- `else`: Runs if no error in `try`.
+- `finally`: Always runs (error or not).
+
+```python
+try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("Error!")
+else:
+    print("No error")
+finally:
+    print("Always runs")
+```
+
+---
+
+### `raise`
+- Manually throw an error.
+
+```python
+raise ValueError("Invalid value")
+```
+
+---
+
+### `NoReturn` (from `typing`)
+- Used to mark functions that **never return** (e.g., infinite loop or always raises error).
+
+```python
+from typing import NoReturn
+
+def crash() -> NoReturn:
+    raise RuntimeError("Crash!")
+```
+
+---
+
+### Alternative: `None` or omit return type
+- If unsure or return nothing, use `None` or omit type hint.
+
+```python
+def log(msg: str) -> None:
+    print(msg)
+
+# or just
+def log(msg: str):
+    print(msg)
+```
+
+Want a TS version of any part?
+When Should You Stick to NoReturn?
+If you are using type checking tools like mypy, NoReturn is still the best choice for functions that:
+
+Always raise an exception
+
+Never return (e.g., an infinite loop)
+
+Terminate the program (sys.exit())
+
+✅ But if you are not using static type checking, omitting the type hint or using None may be enough.
