@@ -45,3 +45,10 @@
 # for value in gen:
 #     # Print each value generated
 #     print(value)
+# full_name   = "John Doe"
+# print(full_name.upper())
+# my = "John"
+
+# x = "#".join(my)
+
+# print(x)
