@@ -325,22 +325,103 @@ try:
     x = 1 / 0
 except ZeroDivisionError:
     print("Error!")
-else:
+except Exception:  # Catches anything not caught above
+    print("An unexpected error occurred.")
+else: #optional runs if no error in try block
     print("No error")
-finally:
+finally: #optional always runs
     print("Always runs")
 ```
+---
+cheatsheet for common exceptions:
 
+```python
+# Common exceptions
+try:
+    # risky code
+except TypeError:
+    print("Wrong type! Check your data.")
+except ValueError:
+    print("Bad value! Try again.")
+except ZeroDivisionError:
+    print("Can't divide by zero!")
+except IndexError:
+    print("Index out of range!")
+except KeyError:
+    print("Key not found in dict!")
+except AttributeError:
+    print("Object has no such attribute!")
+except FileNotFoundError:
+    print("File not found!")
+except ImportError:
+    print("Import failed!")
+except NameError:
+    print("Variable not defined!")
+except RuntimeError:
+    print("Something went wrong during execution!")
+except PermissionError:
+    print("You don’t have permission!")
+except Exception:
+    print("Something went wrong.")
+
+#You create a new custom error by creating  classes for example (NegativeNumberError) that inherits from the base Exception class.like
+class NegativeNumberError(Exception):
+    """Custom exception for negative numbers"""
+    pass
+
+def check_positive(n):
+    if n < 0:
+        raise NegativeNumberError("Negative numbers are not allowed!")
+    return f"{n} is positive"
+
+try:
+    print(check_positive(-5))  # Raises NegativeNumberError
+except NegativeNumberError as e:
+    print(f"Custom Exception Caught: {e}", " - Exception Class Type: ", type(e))  # Output: Custom Exception Caught: Negative numbers are not allowed!
+
+```
+---
 ---
 
 ### `raise`
 - Manually throw an error.
+raise will stop the current flow of execution and look for an except block to handle the exception. If no except block catches the raised exception, the program will crash (terminate).
 
 ```python
 raise ValueError("Invalid value")
 ```
+You can use `raise` without a custom message by just raising the exception class itself:
 
+### Example:
+
+```python
+raise ValueError  # Will raise a default ValueError
+```
+
+This will trigger the `ValueError` exception without any custom message. If uncaught, it will display something like:
+
+```
+ValueError
+```
+
+### Re-raising an existing exception without a custom message:
+
+```python
+try:
+    # Some code
+    raise ValueError("Something went wrong!")
+except ValueError:
+    raise  # Re-raises the same exception without modifying the message
+```
+
+This will re-raise the same `ValueError` and propagate it up the stack.
 ---
+## Equivalent of throw and throws in Python
+In Java, throw and throws are used for exception handling. Python doesn’t have a direct equivalent to throws, but throw is equivalent to Python's raise.
+
+
+
+✔ Python doesn’t enforce throws, but you can document exceptions in docstrings or use type hints (NoReturn).
 
 ### `NoReturn` (from `typing`)
 - Used to mark functions that **never return** (e.g., infinite loop or always raises error).
