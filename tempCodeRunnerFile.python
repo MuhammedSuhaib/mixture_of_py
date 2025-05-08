@@ -1,3 +1,5 @@
+full_name   = "John Doe"
+print(full_name.upper())
 my = "John"
 
 x = "#".join(my)
